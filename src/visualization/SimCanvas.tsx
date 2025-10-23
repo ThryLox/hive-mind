@@ -477,3 +477,5 @@ function drawPSOMarkers(ctx: CanvasRenderingContext2D, config: SimConfig) {
 // Dynamic force vector overlays rendering support
 
 // Real-time Voronoi diagram partitioning cells
+
+// Persistent heatmaps for coverage analysis trails
