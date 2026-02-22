@@ -8,7 +8,6 @@ import { StatsPanel } from './ui/StatsPanel';
 import { InspectorPanel } from './ui/InspectorPanel';
 import type { WorkerOutMessage } from './workers/protocol';
 import { computeAvgSpeed, computeClusterCount, computeCoverage, updateVisitGrid } from './utils/analytics';
-import { AgentState } from './core/types';
 
 const COVERAGE_CELL_SIZE = 20;
 
