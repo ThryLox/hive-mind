@@ -1,15 +1,13 @@
-# ⬡ HIVEMIND
+# HIVEMIND
 ### High-Performance Swarm Intelligence Debugger
 
 **[Live Demo](https://hive-mind-psi.vercel.app/)** | **[Architecture Docs](docs/ARCHITECTURE.md)**
 
 HIVEMIND is an advanced visual analytics platform for observing, debugging, and optimizing decentralized autonomous systems. Built on a custom high-performance physics engine, it allows researchers and developers to visualize emergent behaviors in real-time.
 
-![System Emblem](public/emblem.svg)
-
 ---
 
-## 🛠️ Performance Architecture
+## Performance Architecture
 
 HIVEMIND is engineered for high-count agent simulation without sacrificing UI responsiveness.
 
@@ -19,7 +17,7 @@ HIVEMIND is engineered for high-count agent simulation without sacrificing UI re
 
 ---
 
-## 🔍 Core Visualization Layers
+## Core Visualization Layers
 
 ![Swarm Command Console](public/swarm-screenshot.png)
 

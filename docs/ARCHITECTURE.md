@@ -76,7 +76,7 @@ graph TB
 
     UI -->|params, controls| Store
     Store -->|config changes| SimEngine
-    SimEngine -->|agent states (ArrayBuffer)| Store
+    SimEngine -->|"agent states (ArrayBuffer)"| Store
     Store -->|positions + metadata| Renderer
     Store -->|positions + metadata| Analytics
     Analytics -->|metrics| UI
