@@ -1,6 +1,8 @@
 # ⬡ HIVEMIND
 ### Swarm Intelligence Debugger & Visualizer
 
+**[Live Demo](https://hive-mind-psi.vercel.app/)**
+
 HIVEMIND is a high-performance, real-time visualizer and debugging tool for swarm intelligence algorithms. It provides deep visibility into emergent behaviors through detailed force analysis, spatial partitioning, and temporal control.
 
 ![Swarm Simulation](https://via.placeholder.com/1200x600/0d1117/58a6ff?text=HIVEMIND+Swarm+Intelligence+Debugger)
