@@ -1,50 +1,69 @@
 # ⬡ HIVEMIND
-### Swarm Intelligence Debugger & Visualizer
+### High-Performance Swarm Intelligence Debugger
 
-**[Live Demo](https://hive-mind-psi.vercel.app/)**
+**[Live Demo](https://hive-mind-psi.vercel.app/)** | **[Architecture Docs](docs/ARCHITECTURE.md)**
 
-HIVEMIND is a high-performance, real-time visualizer and debugging tool for swarm intelligence algorithms. It provides deep visibility into emergent behaviors through detailed force analysis, spatial partitioning, and temporal control.
+HIVEMIND is an advanced visual analytics platform for observing, debugging, and optimizing decentralized autonomous systems. Built on a custom high-performance physics engine, it allows researchers and developers to visualize emergent behaviors in real-time.
 
-![Swarm Simulation](https://via.placeholder.com/1200x600/0d1117/58a6ff?text=HIVEMIND+Swarm+Intelligence+Debugger)
+![System Emblem](public/emblem.svg)
 
-## 🚀 Key Features
+---
 
-### 🧠 Advanced Algorithms
-- **Boids (Reynolds Flocking)**: Real-time alignment, cohesion, and separation.
-- **ACO (Ant Colony Optimization)**: Pheromone-based pathfinding with food sources and home nests.
-- **PSO (Particle Swarm Optimization)**: Global optimization tracking with multi-target convergence.
+## 🛠️ Performance Architecture
 
-### 🛠️ Debugger Toolkit
-- **Agent Inspector**: Click any agent to analyze its internal state, velocity, and algorithm-specific metadata.
-- **Force Vector Overlay**: Multi-colored arrows visualize exactly *why* agents move. Understand the pull of separation vs. the push of obstacle avoidance.
-- **Anomaly Detection**: Automatic detection of "stuck" agents or algorithm failures, highlighted in high-contrast red.
+HIVEMIND is engineered for high-count agent simulation without sacrificing UI responsiveness.
 
-### 🕸️ Visual Analysis
-- **Voronoi Partitioning**: Real-time discrete Voronoi grid showing agent territories.
-- **Heatmap Overlay**: Persistent coverage analysis tracking swarm density over time.
-- **Communication Links**: Optimized spatial-hash based relationship visualization.
+- **Non-blocking Simulation**: A dedicated Web Worker handles the $O(1)$ spatial hashing and per-agent physics, keeping the UI thread strictly for 60fps rendering.
+- **Spatial Partitioning**: Agents are indexed using a high-density spatial hash grid, enabling real-time proximity queries for flocking, food foraging, and collision avoidance.
+- **Time Mastery**: A 300-tick ring buffer enables **bidirectional time-traveling**. Step forward to predict convergence, or step backward to analyze the exact moment an anomaly occurred.
 
-### ⏳ Time & Data Control
-- **Bidirectional Stepping**: Step forward and backward through a 300-tick state history buffer.
-- **Cinema Mode**: Ultra-slow 0.1x speed for granular micro-behavior analysis.
-- **State Export**: Export complete swarm states to **JSON** or analytical subsets to **CSV**.
+---
 
-## 💻 Tech Stack
-- **Frontend**: React, TypeScript, Vite
-- **Rendering**: Canvas API (O(n) optimized)
-- **State**: Zustand
-- **Physics Engine**: Dedicated Web Worker for zero-lag UI
-- **Styling**: Vanilla CSS (Glassmorphism 2.0)
+## 🔍 Core Visualization Layers
 
-## 🛠️ Development
+![Swarm Command Console](public/swarm-screenshot.png)
 
-### Core Architecture
-HIVEMIND uses a **Main Thread <-> Worker** architecture. The heavy lifting (spatial hashing, algorithm logic, history tracking) happens off-thread to ensure the UI remains responsive at 60fps even with 1000+ agents.
+### 1. Behavior Analysis
+- **Force Vector Overlay**: Multi-colored tactical arrows visualize the specific pulls (cohesion, alignment, separation) acting on every agent.
+- **Voronoi Partitioning**: Discrete real-time grid showing "territory" ownership and spatial dominance.
+- **Heatmap Coverage**: Persistent trail analysis to identify gaps in swarm exploration.
 
-### Adding an Algorithm
-1. Implement the `SwarmAlgorithm` interface in `src/algorithms/base.ts`.
-2. Add your logic to `src/algorithms/`.
-3. Register the algorithm in the `getAlgorithm` factory.
+### 2. Deep Inspection
+![Agent Inspector Detail](public/inspector-screenshot.png)
+- **Detailed Telemetry**: Click any agent to slide in an inspector panel showing velocity, heading, and algorithm-specific metadata.
+- **Anomaly Detection**: Passive background detection identifies agents that are "stuck" or clustering pathologically, highlighting them in tactical red.
+
+---
+
+## 💼 Real-World Use Cases
+
+HIVEMIND is designed to model several critical autonomous workflows:
+
+- **Search & Rescue (PSO)**: Visualizing how a swarm of drones can collectively find a signal maximum (e.g., a heat source) in a complex environment.
+- **Logistics & Foraging (ACO)**: Optimizing pathing between a base and multiple dynamic resource points using pheromone-based stigmergy.
+- **Formation Control (Boids)**: Maintaining rigid or fluid formations through obstacle-heavy channels for coordinated movement.
+
+---
+
+## 🚀 Future Roadmap (AEGIS Evolution)
+
+HIVEMIND is the foundation for a broader suite of autonomous tools:
+
+- **AEGIS Safety Auditor**: Integrating formal verification to guarantee agents stay within specific geofences.
+- **Multi-Robot Communication Analysis**: Simulating packet loss and latency between agents to test swarm resilience.
+- **Mission Planning Interop**: Direct export of optimized swarm paths to ROS2-compatible mission files.
+
+---
+
+## ⚙️ Development
+
+### Local Setup
+1. `npm install`
+2. `npm run dev`
+
+### Production Build
+1. `npm run build`
+2. `vercel deploy`
 
 ---
 *Developed with ♥ by ThryLox*
