@@ -33,7 +33,7 @@ HIVEMIND is engineered for high-count agent simulation without sacrificing UI re
 
 ---
 
-## 💼 Real-World Use Cases
+## Real-World Use Cases
 
 HIVEMIND is designed to model several critical autonomous workflows:
 
@@ -43,7 +43,7 @@ HIVEMIND is designed to model several critical autonomous workflows:
 
 ---
 
-## 🚀 Future Roadmap (AEGIS Evolution)
+## Future Roadmap (AEGIS Evolution)
 
 HIVEMIND is the foundation for a broader suite of autonomous tools:
 
@@ -53,7 +53,7 @@ HIVEMIND is the foundation for a broader suite of autonomous tools:
 
 ---
 
-## ⚙️ Development
+## Development
 
 ### Local Setup
 1. `npm install`
