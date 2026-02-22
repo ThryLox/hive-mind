@@ -27,7 +27,7 @@ HIVEMIND is engineered for high-count agent simulation without sacrificing UI re
 - **Heatmap Coverage**: Persistent trail analysis to identify gaps in swarm exploration.
 
 ### 2. Deep Inspection
-![Agent Inspector Detail](public/inspector-screenshot.png)
+![Agent Inspector Detail](public/swarm-inspector.png)
 - **Detailed Telemetry**: Click any agent to slide in an inspector panel showing velocity, heading, and algorithm-specific metadata.
 - **Anomaly Detection**: Passive background detection identifies agents that are "stuck" or clustering pathologically, highlighting them in tactical red.
 
